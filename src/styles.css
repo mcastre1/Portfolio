@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --portfolio-background: #0b0b0a;
+  --portfolio-heading: #dedee0;
+  --portfolio-text: #a6a4ae;
+  --portfolio-accent: #897ddd;
+  --portfolio-border: #34323d;
+}
