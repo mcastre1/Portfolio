@@ -2,3 +2,28 @@
     max-width: 1200px;
     margin: 0 auto;
 }
+
+.navbar {
+    position: sticky;
+    z-index: 1000;
+    display: flex;
+    padding: 0 24px;
+    background-color: var(--portfolio-background);
+    color: var(--portfolio-heading);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
