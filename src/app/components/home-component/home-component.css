@@ -3,9 +3,10 @@
     display: flex;
     width: 100%;
     min-height: 300px;
-    /* background-color: rgb(29, 173, 173); */
     background-color: var(--portfolio-background);
     flex-direction: row;
+    border: 2px solid red;
+    box-sizing: border-box;
 }
 
 .about-me-picture-container {
@@ -14,13 +15,11 @@
     align-items: center;
     justify-content: center;
     padding: 15px;
-    /* border: 2px solid red; */
 }
 
 .about-me-text-container {
     flex: 2;
     padding: 15px;
-    /* border: 2px solid red; */
 }
 
 .about-me-picture-container img {

@@ -1,0 +1,16 @@
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: 2px solid red;
+    height: auto;
+    min-height: 80px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.devicons {
+    font-size: 64px;
+}
