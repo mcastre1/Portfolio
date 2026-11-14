@@ -2,7 +2,7 @@
     margin-top: 0px;
     display: flex;
     width: 100%;
-    height: 300px;
+    min-height: 300px;
     /* background-color: rgb(29, 173, 173); */
     background-color: var(--portfolio-background);
     flex-direction: row;
@@ -39,6 +39,8 @@
 
     .about-me {
         flex-direction: column;
+        width: 100%;
+        align-items: center;
     }
 
     .about-me-picture-container img {
