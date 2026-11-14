@@ -7,6 +7,7 @@
     background-color: var(--portfolio-background);
     flex-direction: row;
 }
+
 .about-me-picture-container {
     display: flex;
     flex: 1;
@@ -32,4 +33,20 @@
 
 .about-me-text-container p {
     color: var(--portfolio-text)
+}
+
+@media (max-width: 768px) {
+
+    .about-me {
+        flex-direction: column;
+    }
+
+    .about-me-picture-container img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-me-text-container {
+        padding-top: 0px;
+    }
 }
