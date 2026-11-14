@@ -12,11 +12,13 @@
     flex: 1;
     align-items: center;
     justify-content: center;
+    padding: 15px;
     /* border: 2px solid red; */
 }
 
 .about-me-text-container {
     flex: 2;
+    padding: 15px;
     /* border: 2px solid red; */
 }
 
@@ -26,4 +28,8 @@
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 0 12px #897ddd;
+}
+
+.about-me-text-container p {
+    color: var(--portfolio-text)
 }
