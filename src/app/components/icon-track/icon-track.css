@@ -1,16 +1,36 @@
 .icon-container {
     display: flex;
-    flex-direction: row;
     width: 100%;
-    border: 2px solid red;
-    height: auto;
+    min-width: 0;
+    overflow: hidden;
     min-height: 80px;
-    padding: 20px;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
 }
 
-.devicons {
-    font-size: 64px;
+.icon-track {
+    display: flex;
+    width: max-content;
+    flex-shrink: 0;
+    animation: scroll 25s linear infinite;
+}
+
+.icon-group {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding-right: 35px;
+    flex-shrink: 0;
+}
+
+.icon-group i {
+    font-size: 40px;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }
