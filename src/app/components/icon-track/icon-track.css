@@ -1,15 +1,17 @@
  .icon-container {
+    margin-top: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
      display: flex;
      width: 100%;
      min-width: 0;
      overflow: hidden;
-    background-color: var(--portfolio-border);
+     background-color: var(--portfolio-background);
      min-height: 40px;
      height: auto;
  }
 
  .carousel {
-     margin: 10px auto;
      width: 100%;
      /* border: 5px solid blue; */
      display: flex;
@@ -24,20 +26,31 @@
      display: flex;
      align-items: center;
      justify-content: center;
-     gap: 1em;
-     animation: spin 5s infinite linear;
-     padding-right: 1em;
+     gap: 3em;
+     animation: spin 30s infinite linear;
+     padding-right: 3em;
  }
 
  .card {
-     flex: 0 0 5em;
-     height: 2em;
-     background-color: var(--portfolio-border);
-     font-size: 3em;
+     flex: 0 0 4em;
+     height: 100%;
+     background-color: var(--portfolio-background);
+     font-size: 2.5em;
      border-radius: .2em;
      text-align: center;
      align-content: center;
  }
+
+ .card mat-icon {
+    width: 2em;
+    height: 2em;
+    font-size: inherit;
+}
+
+.card mat-icon svg {
+    width: 100%;
+    height: 100%;
+}
 
  @keyframes spin {
      from {
