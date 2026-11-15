@@ -1,3 +1,4 @@
+@import "devicons/css";
 /* You can add global styles to this file, and also import other style files */
 :root {
   --portfolio-background: #0b0b0a;
@@ -7,20 +8,36 @@
   --portfolio-border: #34323d;
 }
 
+/* Make sizing predictable throughout the application */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
 body {
     margin: 0;
     padding-left: 20px;
     padding-right: 20px;
     height: 100%;
+    overflow: hidden;
 }
 
 .site-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #1f1f20;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 
-app-navbar {
     max-width: 1200px;
     margin: 0 auto;
+
+    background-color: #1f1f20;
 }
