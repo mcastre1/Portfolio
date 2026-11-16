@@ -20,6 +20,7 @@ const colors = [
 
 @Component({
   imports: [],
+  standalone: true,
   selector: 'app-ember-background',
   styleUrl: './ember-background.css',
   templateUrl: './ember-background.html',
@@ -36,6 +37,7 @@ export class EmberBackground implements AfterViewInit {
   private embers: Ember[] = [];
 
   ngAfterViewInit(): void {
+    console.log('EMBER COMPONENT LOADED');
     // We get our canvas reference
     const canvas = this.canvasRef.nativeElement;
     this.ctx = canvas.getContext('2d')!;
@@ -55,7 +57,7 @@ export class EmberBackground implements AfterViewInit {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         size: Math.random() * 3 + 1,
-        speed: Math.random() * .5 + .25,
+        speed: Math.random() * .5,
         opacity: Math.random(),
         color: colors[Math.floor(Math.random() * colors.length)],
         angle: Math.random() * Math.PI * 2,
@@ -110,7 +112,7 @@ export class EmberBackground implements AfterViewInit {
       ember.y -= ember.speed;
       ember.angle += 0.02;
       ember.x += Math.sin(ember.angle) * 0.3;
-      ember.opacity -= 0.0005;
+      ember.opacity -= 0.0002;
       
       // When ember goes above view port, move it all the way down with a new x.
       if (ember.y < 0) {
