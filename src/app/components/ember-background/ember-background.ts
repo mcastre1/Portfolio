@@ -36,43 +36,31 @@ export class EmberBackground implements AfterViewInit {
   private embers: Ember[] = [];
 
   ngAfterViewInit(): void {
+    // We get our canvas reference
     const canvas = this.canvasRef.nativeElement;
     this.ctx = canvas.getContext('2d')!;
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
+    // In case of resize we change the canvas wwidht and height
     window.addEventListener('resize', () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     });
 
+    // Create and randomly assign attributes.
     for (let i = 0; i < 100; i++) {
       this.embers.push({
-        x:
-          Math.random() *
-          canvas.width,
-
-        y:
-          Math.random() *
-          canvas.height,
-
-        size:
-          Math.random() * 3 + 1,
-
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: Math.random() * 3 + 1,
         speed: Math.random() * .5 + .25,
-
         opacity: Math.random(),
-        color:
-          colors[
-          Math.floor(
-            Math.random() * colors.length
-          )
-          ],
-        angle: Math.random() * Math.PI * 2
+        color: colors[Math.floor(Math.random() * colors.length)],
+        angle: Math.random() * Math.PI * 2,
       });
     }
-
 
     this.animate();
   }
@@ -105,9 +93,10 @@ export class EmberBackground implements AfterViewInit {
   }
 
   private animate() {
-    // Clean canvas by drawing a rect on top of it.
+    // Get new canvas size in case of resize.
     const canvas = this.canvasRef.nativeElement;
 
+    // Clean canvas by drawing a rect of canvas size on top of it.
     this.ctx.clearRect(
       0,
       0,
@@ -117,20 +106,17 @@ export class EmberBackground implements AfterViewInit {
 
     // Loop through each ember object, move and draw.
     for (const ember of this.embers) {
+      
       ember.y -= ember.speed;
       ember.angle += 0.02;
-      ember.x += Math.sin(
-        ember.angle
-      ) * 0.3;
-      ember.opacity -= 0.0002;
+      ember.x += Math.sin(ember.angle) * 0.3;
+      ember.opacity -= 0.0005;
+      
+      // When ember goes above view port, move it all the way down with a new x.
       if (ember.y < 0) {
         ember.opacity = Math.random();
-        ember.y =
-          window.innerHeight;
-
-        ember.x =
-          Math.random() *
-          window.innerWidth;
+        ember.y = window.innerHeight;
+        ember.x = Math.random() * window.innerWidth;
       }
     }
 
@@ -142,6 +128,7 @@ export class EmberBackground implements AfterViewInit {
 
   }
 
+  // Helper function to go from hex to rgba for rect fill
   private hexToRgba(
     hex: string,
     opacity: number
