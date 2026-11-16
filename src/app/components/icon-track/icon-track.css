@@ -6,7 +6,7 @@
      width: 100%;
      min-width: 0;
      overflow: hidden;
-     background-color: var(--portfolio-background);
+     /* background-color: var(--portfolio-background); */
      min-height: 40px;
      height: auto;
  }
@@ -34,7 +34,7 @@
  .card {
      flex: 0 0 4em;
      height: 100%;
-     background-color: var(--portfolio-background);
+     /* background-color: var(--portfolio-background); */
      font-size: 2.5em;
      border-radius: .2em;
      text-align: center;
