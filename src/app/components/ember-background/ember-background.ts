@@ -6,9 +6,9 @@ interface Ember {
   y: number;
   size: number;
   speed: number;
-  drift: number;
   opacity: number;
   color: string;
+  angle: number;
 }
 
 // list of pallete colors
@@ -57,17 +57,17 @@ export class EmberBackground implements AfterViewInit {
 
         speed: Math.random() * .5 + .25,
 
-        drift: (Math.random() - 0.5) * 0.6,
-
         opacity: Math.random(),
         color:
           colors[
           Math.floor(
             Math.random() * colors.length
           )
-          ]
+          ],
+        angle: Math.random() * Math.PI * 2
       });
     }
+
 
     this.animate();
   }
@@ -111,7 +111,10 @@ export class EmberBackground implements AfterViewInit {
     // Loop through each ember object, move and draw.
     for (const ember of this.embers) {
       ember.y -= ember.speed;
-      ember.x += ember.drift;
+      ember.angle += 0.02;
+      ember.x += Math.sin(
+        ember.angle
+      ) * 0.3;
       if (ember.y < 0) {
         ember.y =
           window.innerHeight;
