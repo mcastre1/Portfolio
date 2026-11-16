@@ -8,7 +8,15 @@ interface Ember {
   speed: number;
   drift: number;
   opacity: number;
+  color: string;
 }
+
+// list of pallete colors
+const colors = [
+  '#897ddd',
+  '#a6a4ae',
+  '#34323d'
+];
 
 @Component({
   imports: [],
@@ -47,11 +55,17 @@ export class EmberBackground implements AfterViewInit {
         size:
           Math.random() * 3 + 1,
 
-        speed: Math.random() * 2 + 0.5,
+        speed: Math.random() * .5 + .25,
 
-        drift: 0,
+        drift: (Math.random() - 0.5) * 0.6,
 
-        opacity: Math.random()
+        opacity: Math.random(),
+        color:
+          colors[
+          Math.floor(
+            Math.random() * colors.length
+          )
+          ]
       });
     }
 
@@ -65,13 +79,13 @@ export class EmberBackground implements AfterViewInit {
       this.ctx.arc(
         ember.x,
         ember.y,
-        2,
+        ember.size,
         0,
         Math.PI * 2
       );
 
       this.ctx.fillStyle =
-        '#897ddd';
+        `#897ddd`;
 
       this.ctx.fill();
     }
@@ -86,7 +100,8 @@ export class EmberBackground implements AfterViewInit {
     );
 
     for (const ember of this.embers) {
-      ember.y -= 1;
+      ember.y -= ember.speed;
+      ember.x += ember.drift;
       if (ember.y < 0) {
         ember.y =
           window.innerHeight;
