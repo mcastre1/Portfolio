@@ -42,6 +42,11 @@ export class EmberBackground implements AfterViewInit {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+
     for (let i = 0; i < 100; i++) {
       this.embers.push({
         x:
@@ -87,7 +92,7 @@ export class EmberBackground implements AfterViewInit {
       );
 
       this.ctx.fillStyle =
-        `#897ddd`;
+        this.hexToRgba(ember.color, ember.opacity);
 
       // Glow(Blur) of size 10 and of ember color
       this.ctx.shadowBlur = 10;
@@ -101,11 +106,13 @@ export class EmberBackground implements AfterViewInit {
 
   private animate() {
     // Clean canvas by drawing a rect on top of it.
+    const canvas = this.canvasRef.nativeElement;
+
     this.ctx.clearRect(
       0,
       0,
-      window.innerWidth,
-      window.innerHeight
+      canvas.width,
+      canvas.height
     );
 
     // Loop through each ember object, move and draw.
@@ -115,7 +122,9 @@ export class EmberBackground implements AfterViewInit {
       ember.x += Math.sin(
         ember.angle
       ) * 0.3;
+      ember.opacity -= 0.0002;
       if (ember.y < 0) {
+        ember.opacity = Math.random();
         ember.y =
           window.innerHeight;
 
@@ -133,5 +142,21 @@ export class EmberBackground implements AfterViewInit {
 
   }
 
+  private hexToRgba(
+    hex: string,
+    opacity: number
+  ): string {
+
+    const bigint = parseInt(
+      hex.replace('#', ''),
+      16
+    );
+
+    const r = (bigint >> 16) & 255;
+    const g = (bigint >> 8) & 255;
+    const b = bigint & 255;
+
+    return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+  }
 
 }
