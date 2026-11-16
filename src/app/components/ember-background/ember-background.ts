@@ -74,8 +74,10 @@ export class EmberBackground implements AfterViewInit {
 
   private drawEmbers() {
     for (const ember of this.embers) {
+      // Start drawing
       this.ctx.beginPath();
 
+      // Path to draw
       this.ctx.arc(
         ember.x,
         ember.y,
@@ -87,11 +89,18 @@ export class EmberBackground implements AfterViewInit {
       this.ctx.fillStyle =
         `#897ddd`;
 
+      // Glow(Blur) of size 10 and of ember color
+      this.ctx.shadowBlur = 10;
+      this.ctx.shadowColor =
+        ember.color;
+
+      // Draw the circle
       this.ctx.fill();
     }
   }
 
   private animate() {
+    // Clean canvas by drawing a rect on top of it.
     this.ctx.clearRect(
       0,
       0,
@@ -99,6 +108,7 @@ export class EmberBackground implements AfterViewInit {
       window.innerHeight
     );
 
+    // Loop through each ember object, move and draw.
     for (const ember of this.embers) {
       ember.y -= ember.speed;
       ember.x += ember.drift;
@@ -112,6 +122,7 @@ export class EmberBackground implements AfterViewInit {
       }
     }
 
+    // Once browser is ready, redraw.
     this.drawEmbers();
     requestAnimationFrame(
       () => this.animate()
