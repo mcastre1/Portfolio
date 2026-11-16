@@ -54,6 +54,14 @@
     }
 }
 
+.retro {
+  filter:
+    saturate(0.9)
+    contrast(1.1)
+    brightness(0.95)
+    hue-rotate(12deg);
+}
+
 :host {
     display: block;
     width: 100%;
