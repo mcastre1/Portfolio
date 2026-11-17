@@ -71,7 +71,6 @@
     color: var(--portfolio-heading);
     margin: 0;
     margin-bottom: .5em;
-
 }
 
 .school-container p {
@@ -115,6 +114,10 @@
     .about-me-text-container {
         padding-top: 0px;
         width: 100%;
+    }
+
+    .schools-container {
+        flex-direction: column;
     }
 }
 
