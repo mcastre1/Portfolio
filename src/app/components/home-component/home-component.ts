@@ -7,4 +7,9 @@ import { IconTrack } from '../icon-track/icon-track';
   styleUrl: './home-component.css',
   templateUrl: './home-component.html',
 })
-export class HomeComponent {}
+export class HomeComponent {
+
+  openWebsite(url: string): void{
+    window.open(url, '_blank');
+  }
+}
