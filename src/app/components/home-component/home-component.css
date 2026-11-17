@@ -36,6 +36,41 @@
     color: var(--portfolio-text)
 }
 
+.education-container {
+    display: flex;
+    width: 100%;
+    background-color: rgba(52, 50, 61, 0.08);
+    border: 1px solid rgba(137, 125, 221, 0.08);
+    border-radius: 16px;
+    height: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.section-title {
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+
+  width: 100px;
+  height: 3px;
+
+  margin: 12px auto 0;
+
+  background: var(--portfolio-accent);
+  border-radius: 999px;
+
+  box-shadow:
+    0 0 8px rgba(137, 125, 221, 0.5),
+    0 0 16px rgba(137, 125, 221, 0.25);
+}
+
 @media (max-width: 768px) {
 
     .about-me {
