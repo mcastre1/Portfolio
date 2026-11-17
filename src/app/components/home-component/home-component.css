@@ -67,6 +67,10 @@
     padding: 1em;
 }
 
+.school-container:hover {
+    border: 2px solid rgba(137, 125, 221, 0.5);
+}
+
 .school-container h2{
     color: var(--portfolio-heading);
     margin: 0;
@@ -87,11 +91,15 @@
   position: relative;
 }
 
+#skills {
+    margin-top: 1em !important;
+}
+
 .section-title::after {
   content: '';
   display: block;
 
-  width: 100px;
+  width: 20%;
   height: 3px;
 
   margin: 12px auto 0;
