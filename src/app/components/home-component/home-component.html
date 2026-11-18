@@ -53,9 +53,19 @@
         </div>
         <div class="section-container" style="pointer-events: none !important;">
             <h2 class="section-subheading">Frameworks</h2>
+            <ul class="skill-list" style="justify-content: left;">
+                @for (f of frameworks; track f){
+                <li>{{f}}</li>
+                }
+            </ul>
         </div>
         <div class="section-container" style="pointer-events: none !important;">
-            <h2 class="section-subheading">Soft</h2>
+            <h2 class="section-subheading">Tools & Platforms</h2>
+            <ul class="skill-list" style="justify-content: left;">
+                @for (t of toolsPlatforms; track t){
+                <li>{{t}}</li>
+                }
+            </ul>
         </div>
     </div>
 </div>

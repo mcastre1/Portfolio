@@ -10,9 +10,9 @@ import { CommonModule } from '@angular/common';
 })
 
 export class HomeComponent {
-  private languages = ['Python', 'C#', 'C++', 'Java', 'Javascript', 'Typescript', 'CSS', 'Html'];
-  private frameworks = [];
-  private soft = [];
+  private languages = ['Python', 'C#', 'C++', 'Java', 'Javascript', 'Typescript', 'CSS', 'Html', 'SQL'];
+  private frameworks = ['Angular', 'Vue', 'React Native', '.NET', 'ASP.NET', 'Django', 'Flask'];
+  private toolsPlatforms = ['Git', 'Github', 'Azure', 'SQL Server', 'Postman', 'VS Code', 'Cloudflare', 'Expo', 'Docker'];
 
   openWebsite(url: string): void{
     window.open(url, '_blank');
