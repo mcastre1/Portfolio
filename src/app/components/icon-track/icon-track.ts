@@ -12,6 +12,7 @@ import { IconService } from '../../services/icon';
 })
 export class IconTrack {
   @Input() iconNames: string[] = [];
+  @Input() timer : number = 30;
 
   constructor(private iconService: IconService){
     this.iconService.initialize()

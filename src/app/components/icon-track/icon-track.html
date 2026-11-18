@@ -1,11 +1,11 @@
 <div class="icon-container">
     <div class="carousel">
-        <div class="group">
+        <div class="group" [style.--spin-duration]="timer + 's'">
             @for(icon of iconNames; track $index){
                 <div class="card"><mat-icon svgIcon="{{icon}}"></mat-icon></div>
             }
         </div>
-        <div class="group" aria-hidden>
+        <div class="group" [style.--spin-duration]="timer + 's'" aria-hidden>
             @for(icon of iconNames; track $index){
                 <div class="card"><mat-icon svgIcon="{{icon}}"></mat-icon></div>
             }
