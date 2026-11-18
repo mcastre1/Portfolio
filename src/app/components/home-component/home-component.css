@@ -99,6 +99,10 @@
     margin-top: 1.5em !important;
 }
 
+#soft-skills {
+    margin-top: 1.5em !important;
+}
+
 .skill-list {
   list-style: none;
 
@@ -138,7 +142,7 @@
     content: '';
     display: block;
 
-    width: 20%;
+    width: 30%;
     height: 3px;
 
     margin: 12px auto 0;
