@@ -74,7 +74,11 @@
 .section-container h2 {
     color: var(--portfolio-heading);
     margin: 0;
-    margin-bottom: .5em;
+    margin-bottom: 1em;
+}
+
+.section-subheading {
+    margin-bottom: 0;
 }
 
 .section-container h3 {
@@ -127,6 +131,7 @@
 
   text-shadow: 0 0 6px rgba(137, 125, 221, 0.95);
 }
+
 
 .section-title::after {
     content: '';
