@@ -1,20 +1,14 @@
 <div class="icon-container">
     <div class="carousel">
         <div class="group">
-            <div class="card"><mat-icon svgIcon="css3-icon"></mat-icon></div>
-            <div class="card"><mat-icon svgIcon="python-icon"></mat-icon></div>
-            <div class="card"><mat-icon svgIcon="csharp-icon"></mat-icon></div>
-            <div class="card"><mat-icon svgIcon="cplusplus-icon"></mat-icon></div>
-            <div class="card"><mat-icon svgIcon="java-icon"></mat-icon></div>
-            <div class="card"><mat-icon svgIcon="html5-icon"></mat-icon></div>
+            @for(icon of iconNames; track $index){
+                <div class="card"><mat-icon svgIcon="{{icon}}"></mat-icon></div>
+            }
         </div>
         <div class="group" aria-hidden>
-            <div class="card"><mat-icon svgIcon="css3-icon"></mat-icon></div>
-            <div class="card"><mat-icon svgIcon="python-icon"></mat-icon></div>
-            <div class="card"><mat-icon svgIcon="csharp-icon"></mat-icon></div>
-            <div class="card"><mat-icon svgIcon="cplusplus-icon"></mat-icon></div>
-            <div class="card"><mat-icon svgIcon="java-icon"></mat-icon></div>
-            <div class="card"><mat-icon svgIcon="html5-icon"></mat-icon></div>
+            @for(icon of iconNames; track $index){
+                <div class="card"><mat-icon svgIcon="{{icon}}"></mat-icon></div>
+            }
         </div>
     </div>
 </div>
