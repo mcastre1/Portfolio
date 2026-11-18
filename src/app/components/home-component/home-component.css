@@ -49,14 +49,14 @@
     padding: 2em;
 }
 
-.schools-container {
+.sections-container {
     display: flex;
     flex-direction: row;
     width: 100%;
     gap: 2em
 }
 
-.school-container{
+.section-container {
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -67,49 +67,88 @@
     padding: 1em;
 }
 
-.school-container:hover {
-    border: 2px solid rgba(137, 125, 221, 0.5);
+.section-container:hover {
+    border: 1px solid rgba(137, 125, 221, 0.5);
 }
 
-.school-container h2{
+.section-container h2 {
     color: var(--portfolio-heading);
     margin: 0;
-    margin-bottom: .5em;
+    margin-bottom: 1em;
 }
 
-.school-container h3 {
+.section-subheading {
+    margin-bottom: 0;
+}
+
+.section-container h3 {
     margin: 0;
     margin-bottom: .5em;
 }
 
-.school-container p {
+.section-container p {
     margin: 0;
 }
 
 .section-title {
-  margin-top: 0;
-  position: relative;
+    margin-top: 0;
+    position: relative;
 }
 
 #skills {
-    margin-top: 1em !important;
+    margin-top: 1.5em !important;
 }
 
+.skill-list {
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 0.75rem 2rem;
+
+  padding: 0;
+  margin-top: 0;
+
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.skill-list li {
+  display: flex;
+  align-items: center;
+
+  color: var(--portfolio-text);
+}
+
+.skill-list li::before {
+  content: "◆";
+
+  color: var(--portfolio-primary);
+
+  font-size: 0.75rem;
+
+  margin-right: 0.75rem;
+
+  text-shadow: 0 0 6px rgba(137, 125, 221, 0.95);
+}
+
+
 .section-title::after {
-  content: '';
-  display: block;
+    content: '';
+    display: block;
 
-  width: 20%;
-  height: 3px;
+    width: 20%;
+    height: 3px;
 
-  margin: 12px auto 0;
+    margin: 12px auto 0;
 
-  background: var(--portfolio-accent);
-  border-radius: 999px;
+    background: var(--portfolio-accent);
+    border-radius: 999px;
 
-  box-shadow:
-    0 0 8px rgba(137, 125, 221, 0.5),
-    0 0 16px rgba(137, 125, 221, 0.25);
+    box-shadow:
+        0 0 8px rgba(137, 125, 221, 0.5),
+        0 0 16px rgba(137, 125, 221, 0.25);
 }
 
 @media (max-width: 768px) {
@@ -129,17 +168,14 @@
         width: 100%;
     }
 
-    .schools-container {
+    .sections-container {
         flex-direction: column;
     }
 }
 
 .retro {
-  filter:
-    saturate(0.9)
-    contrast(1.1)
-    brightness(0.95)
-    hue-rotate(12deg);
+    filter:
+        saturate(0.9) contrast(1.1) brightness(0.95) hue-rotate(12deg);
 }
 
 :host {
