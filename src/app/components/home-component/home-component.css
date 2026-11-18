@@ -49,14 +49,14 @@
     padding: 2em;
 }
 
-.schools-container {
+.sections-container {
     display: flex;
     flex-direction: row;
     width: 100%;
     gap: 2em
 }
 
-.school-container{
+.section-container{
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -67,22 +67,22 @@
     padding: 1em;
 }
 
-.school-container:hover {
-    border: 2px solid rgba(137, 125, 221, 0.5);
+.section-container:hover {
+    border: 1px solid rgba(137, 125, 221, 0.5);
 }
 
-.school-container h2{
+.section-container h2{
     color: var(--portfolio-heading);
     margin: 0;
     margin-bottom: .5em;
 }
 
-.school-container h3 {
+.section-container h3 {
     margin: 0;
     margin-bottom: .5em;
 }
 
-.school-container p {
+.section-container p {
     margin: 0;
 }
 
