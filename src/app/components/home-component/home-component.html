@@ -4,7 +4,13 @@
     </div>
     <div class="about-me-text-container">
         <h2 style="color: var(--portfolio-heading)">Hi,</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut tristique metus. Sed in leo in nisi sagittis varius sed vitae nulla. Integer sagittis tortor vulputate, euismod ligula hendrerit, gravida massa. Vestibulum ut rutrum nulla, quis posuere risus. Pellentesque egestas leo augue, ut suscipit eros porta et. Duis vel placerat arcu. Vivamus pretium, lectus id rhoncus vehicula, mi sapien finibus turpis, eu bibendum libero mauris vitae ligula. Quisque mollis velit eget aliquet porttitor. Nulla ac enim in nisl fringilla efficitur ut at ante. Vestibulum eleifend, nunc non mattis venenatis, sapien sem dignissim mauris, vitae accumsan purus dolor a lacus. Maecenas.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut tristique metus. Sed in leo in nisi
+            sagittis varius sed vitae nulla. Integer sagittis tortor vulputate, euismod ligula hendrerit, gravida massa.
+            Vestibulum ut rutrum nulla, quis posuere risus. Pellentesque egestas leo augue, ut suscipit eros porta et.
+            Duis vel placerat arcu. Vivamus pretium, lectus id rhoncus vehicula, mi sapien finibus turpis, eu bibendum
+            libero mauris vitae ligula. Quisque mollis velit eget aliquet porttitor. Nulla ac enim in nisl fringilla
+            efficitur ut at ante. Vestibulum eleifend, nunc non mattis venenatis, sapien sem dignissim mauris, vitae
+            accumsan purus dolor a lacus. Maecenas.</p>
     </div>
 </div>
 <app-icon-track></app-icon-track>
@@ -39,13 +45,13 @@
     <div class="sections-container">
         <div class="section-container" style="pointer-events: none !important;">
             <h2 class="section-subheading">Languages</h2>
-            <ul style="justify-content: left;">
+            <ul class="skill-list" style="justify-content: left;">
                 @for (l of languages; track l){
-                    <li>{{l}}</li>
+                <li>{{l}}</li>
                 }
             </ul>
         </div>
-        <div class="section-container" style="pointer-events: none !important;">
+        <div class="section-container">
             <h2 class="section-subheading">Frameworks</h2>
         </div>
         <div class="section-container" style="pointer-events: none !important;">
