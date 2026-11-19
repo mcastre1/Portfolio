@@ -241,6 +241,8 @@
     justify-content: center;
 
     gap: .75rem 2rem;
+    padding: 1em;
+    padding-top: 0;
 }
 
 .divider {
