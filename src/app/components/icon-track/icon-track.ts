@@ -18,7 +18,4 @@ export class IconTrack {
     this.iconService.initialize()
   }
 
-  ngOnInit(){
-    console.log(this.iconNames);
-  }
 }

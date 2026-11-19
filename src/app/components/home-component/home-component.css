@@ -60,7 +60,6 @@
     display: flex;
     flex: 1;
     flex-direction: column;
-    background-color: var(--portfolio-background);
     height: auto;
     background-color: rgba(52, 50, 61, 0.2);
     border: 1px solid rgba(137, 125, 221, 0.3);
@@ -194,4 +193,49 @@
     width: 100%;
     max-width: 100%;
     min-width: 0;
+}
+
+.certification-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1em;
+    background-color: rgba(52, 50, 61, 0.2);
+    border: 1px solid rgba(137, 125, 221, 0.3);
+}
+
+.cert-badges {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+}
+
+.cert-badge {
+    padding: .6rem 1.2rem;
+
+    border: 1px solid var(--portfolio-primary);
+
+    border-radius: 999px;
+
+    background: rgba(137, 125, 221, .10);
+
+    color: var(--portfolio-heading);
+}
+
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: .75rem 2rem;
+}
+
+.divider {
+    width: 70%;
+    height: 1px;
+
+    margin: 1em auto;
+
+    background: rgba(137,125,221,.25);
 }
