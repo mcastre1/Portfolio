@@ -37,7 +37,7 @@
      align-items: center;
      justify-content: center;
      gap: 3em;
-     animation: spin 30s infinite linear;
+     animation: spin var(--spin-duration, 30s) infinite linear;
      padding-right: 3em;
  }
 

@@ -37,7 +37,6 @@ export class EmberBackground implements AfterViewInit {
   private embers: Ember[] = [];
 
   ngAfterViewInit(): void {
-    console.log('EMBER COMPONENT LOADED');
     // We get our canvas reference
     const canvas = this.canvasRef.nativeElement;
     this.ctx = canvas.getContext('2d')!;
