@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { IconTrack } from '../icon-track/icon-track';
 import { CommonModule } from '@angular/common';
+import { Projects } from '../project/projects';
 
 @Component({
-  imports: [IconTrack, CommonModule],
+  imports: [IconTrack, CommonModule, Projects],
   selector: 'app-home-component',
   styleUrl: './home-component.css',
   templateUrl: './home-component.html',
