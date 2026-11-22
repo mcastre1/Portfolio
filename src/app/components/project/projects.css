@@ -30,6 +30,11 @@
     margin-top: 0;
 }
 
+.project-image {
+    height: 200px;
+    width: 200px;
+}
+
 @media (max-width: 768px){
     .projects-row{
         flex-direction: column;
