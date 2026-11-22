@@ -31,8 +31,8 @@
 }
 
 .project-image {
-    height: 200px;
-    width: 200px;
+    height: 10em;
+    width: 10em;
 }
 
 @media (max-width: 768px){
