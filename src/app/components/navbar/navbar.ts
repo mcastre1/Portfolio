@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { DomSanitizer } from '@angular/platform-browser';
+import { IconService } from '../../services/icon';
 
 @Component({
   imports: [MatToolbarModule,
@@ -15,16 +15,17 @@ import { DomSanitizer } from '@angular/platform-browser';
   templateUrl: './navbar.html',
 })
 export class Navbar {
-  constructor(private iconRegistry: MatIconRegistry, private sanitizer: DomSanitizer) {
-    this.iconRegistry.addSvgIcon(
-      'github-icon',
-      this.sanitizer.bypassSecurityTrustResourceUrl('/assets/icons/github.svg')
-    );
-    this.iconRegistry.addSvgIcon(
-      'linkedin-icon',
-      this.sanitizer.bypassSecurityTrustResourceUrl('/assets/icons/linkedin.svg')
-    );
+  constructor(private iconService: IconService) {
+    this.iconService.initialize()
   }
 
+  downloadResume(): void {
+    const link = document.createElement('a');
+    link.href = '/assets/documents/MiguelCastrejon_Resume.pdf';
+    link.download = 'MiguelCastrejon_Resume.pdf';
 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 }

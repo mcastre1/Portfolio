@@ -18,6 +18,18 @@ export class IconService {
 
   private registerIcons(): void {
     this.iconRegistry.addSvgIcon(
+      'resume-icon',
+      this.sanitizer.bypassSecurityTrustResourceUrl('/assets/icons/resume.svg')
+    );
+    this.iconRegistry.addSvgIcon(
+      'linkedin-icon',
+      this.sanitizer.bypassSecurityTrustResourceUrl('/assets/icons/linkedin.svg')
+    );
+    this.iconRegistry.addSvgIcon(
+      'github-icon',
+      this.sanitizer.bypassSecurityTrustResourceUrl('/assets/icons/github.svg')
+    );
+    this.iconRegistry.addSvgIcon(
       'css3-icon',
       this.sanitizer.bypassSecurityTrustResourceUrl('/assets/icons/skills/css-3.svg')
     );
