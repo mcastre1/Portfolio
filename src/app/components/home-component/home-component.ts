@@ -15,7 +15,13 @@ export class HomeComponent {
   private frameworks = ['Angular', 'Vue', 'React Native', '.NET', 'ASP.NET', 'Django', 'Flask'];
   private toolsPlatforms = ['Git', 'Github', 'Azure', 'SQL Server', 'PostgreSQL', 'Postman', 'VS Code', 'Cloudflare', 'Expo', 'Docker', 'Power Platforms'];
 
+  private showWarning = true;
+
   openWebsite(url: string): void{
     window.open(url, '_blank');
+  }
+
+  closeWarning(): void {
+    this.showWarning = false;
   }
 }
