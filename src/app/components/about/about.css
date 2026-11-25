@@ -1,0 +1,16 @@
+.about-container{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: auto;
+    background-color: rgba(52, 50, 61, 0.2);
+    border: 1px solid rgba(137, 125, 221, 0.3);
+    padding: 1em;
+    border-radius: .5em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.about-container p {
+  margin-bottom: 1.5rem;
+}
