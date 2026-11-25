@@ -10,6 +10,7 @@ mat-expansion-panel {
 }
 
 mat-panel-title {
+    justify-content: center;
     color: var(--portfolio-heading);
     font-weight: 600;
     font-size: 1.1rem;
