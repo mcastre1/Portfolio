@@ -32,3 +32,13 @@ nav {
 mat-icon-button {
     font-size: 50px;
 }
+
+
+@media (max-width: 768px){
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding-top: .5em;
+        padding-bottom: .5em;
+    }
+}

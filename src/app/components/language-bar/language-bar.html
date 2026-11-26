@@ -1,0 +1,23 @@
+<div class="bar-container">
+    <div class="bar">
+        @for (l of languages; track l){
+
+        <div class="language-segment" [style.width.%]="l.percentage" [style.background-color]="l.color">
+
+        </div>
+        }
+    </div>
+
+    <div class="language-list">
+        <div *ngFor="let language of languages" class="language-item">
+
+            <span class="language-dot" [style.background-color]="language.color">
+            </span>
+
+            <span>{{ language.name }}</span>
+
+            <span>{{ language.percentage }}%</span>
+
+        </div>
+    </div>
+</div>
